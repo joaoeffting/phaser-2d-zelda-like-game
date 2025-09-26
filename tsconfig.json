@@ -1,0 +1,22 @@
+{
+	"extends": "@devshareacademy/tsconfig/tsconfig.json",
+	"compilerOptions": {
+		"target": "es2015",          // or "es2020" if you want newer features
+    "lib": ["es2015", "dom"],    // include DOM APIs if you’re in the browser
+    "module": "esnext",          // often used in Phaser + bundlers (webpack/vite)
+		"ignoreDeprecations": "6.0",
+    "strict": true,
+		"outDir": "dist",
+		"typeRoots": [
+      "node_modules/@types"
+    ]
+	},
+	"include": [
+		"**/*.ts"
+	],
+	"ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}
